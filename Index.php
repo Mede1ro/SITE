@@ -22,18 +22,24 @@
             </ul>
         </div>
         <div class="login">
-            <a href=""><span class="material-symbols-outlined">person</span></a>
+            <a href="./Pages/Login.php"><span class="material-symbols-outlined">person</span></a>
         </div>
     </div>
     <svg class="bg-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 320">
-        <path fill="#5000ca" fill-opacity="0.8" d="M0,224L120,240C240,256,480,288,720,277.3C960,267,1200,213,1320,186.7L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+        <defs>
+            <linearGradient id="gradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color: #4601aa; stop-opacity: 0.8" />
+                <stop offset="100%" style="stop-color: #281247; stop-opacity: 1" />
+            </linearGradient>
+        </defs>
+        <path fill="url(#gradiente)" d="M0,224L120,240C240,256,480,288,720,277.3C960,267,1200,213,1320,186.7L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
     </svg>
 
     <div class="main">
 
         <div class="texto">
             <h1>Transformando Sonhos em Realidade!</h1>
-            <p>Embarque em uma jornada exclusiva de estilo e conveniência com os cartões de crédito SosaBank. Não estamos apenas oferecendo cartões; estamos proporcionando uma experiência de pagamento que eleva a maneira como você vive, gasta e aproveita a vida.</p>
+            <p>Embarque em uma jornada exclusiva de estilo e conveniência com os cartões de crédito Sosa. Não estamos apenas oferecendo cartões; estamos proporcionando uma experiência de pagamento que eleva a maneira como você vive, gasta e aproveita a vida.</p>
         </div>
 
         <button class="botao">Adquira Já</button>
