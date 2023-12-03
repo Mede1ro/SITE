@@ -22,7 +22,7 @@
             </ul>
         </div>
         <div class="login">
-            <a href="./Pages/Login.php"><span class="material-symbols-outlined">person</span></a>
+            <a href="/Pages/Login.php"><span class="material-symbols-outlined">person</span></a>
         </div>
     </div>
     <svg class="bg-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 320">

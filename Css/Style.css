@@ -93,6 +93,7 @@
   border-radius: 5px;
   color: white;
   background-color: #322247;
+  cursor: pointer;
 }
 
 .card-container {
@@ -338,6 +339,7 @@
   justify-content: center;
   flex-direction: column;
   height: 500px;
+  position: relative;
 }
 
 .conteudo-card h1 {
@@ -345,6 +347,8 @@
   letter-spacing: 12px;
   text-transform: uppercase;
   font-size: 40px;
+  position: relative;
+  top: -50px;
 }
 
 .conteudo-card form {
@@ -353,10 +357,8 @@
   justify-content: center;
   flex-direction: column;
   width: 240px;
-  height: 170px;
   gap: 30px;
   position: relative;
-
 }
 
 .conteudo-card .input-group {
@@ -382,9 +384,6 @@
   transform: translateY(-20px);
 }
 
-.input-group input:focus~input {
-  margin-bottom: 3px solid;
-}
 
 
 .conteudo-card .input-group label {
@@ -398,7 +397,7 @@
 
 .conteudo-card-redefinir {
   position: absolute;
-  top: 145px;
+  top: 105px;
   font-size: 12px;
   left: 34px;
   color: #322247;
@@ -408,13 +407,152 @@
   color: white;
 }
 
+.conteudo-card .logar {
+  width: 110px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #322247;
+  cursor: pointer;
+}
+
 .conteudo-card-registrar {
   position: absolute;
-  top: 270px;
+  bottom: -130px;
   font-size: 15px;
   color: #322247;
 }
 
 .conteudo-card-registrar a {
   color: white;
+}
+
+/* ///////////////////////////////////////////////////REGISTRO////////////////////////////////////////// */
+
+.container-registro {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(84, 0, 202);
+  background: linear-gradient(138deg, rgba(84, 0, 202, 0.6671918767507004) 0%, rgba(123, 52, 198, 0.268) 64%);
+}
+
+.conteudo-registro {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  width: 820px;
+  height: 520px;
+  border-radius: 16px;
+  background-color: white;
+  backdrop-filter: blur(4.1px);
+  -webkit-backdrop-filter: blur(4.1px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.conteudo-registro-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo-registro-titulo h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 20px;
+  letter-spacing: 5px;
+  color: #5100ca;
+  text-transform: uppercase;
+}
+
+.conteudo-registro form {
+  width: 800px;
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+}
+
+.separacao,
+.formatacao {
+  display: flex;
+  flex-direction: column;
+  margin-right: 120px;
+}
+
+.conteudo-registro .input-group {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.conteudo-registro .input-group input {
+  padding: 0px;
+  border-bottom: 2px solid #322247;
+  outline: none;
+}
+
+.conteudo-registro label {
+  font-size: 16px;
+  color: #322247;
+}
+
+.conteudo-registro input {
+  padding: 5px;
+  height: 20px;
+  border: none;
+}
+
+.conteudo-registro .nome {
+  width: 320px;
+}
+
+.conteudo-registro .cpf, .conteudo-registro .nascimento  {
+  width: 120px;
+}
+
+
+.conteudo-registro .options {
+  display: flex;
+  align-items: center;
+}
+
+.conteudo-registro .options {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.conteudo-registro .options input.fem, .conteudo-registro .options input.nao  {
+  margin-left: 10px;
+}
+
+
+.conteudo-registro .senha {
+  width: 200px;
+}
+
+.conteudo-registro .registrar  {
+  width: 110px;
+  height: 60px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #322247;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.conteudo-registro .ilustracao {
+  position: absolute;
+  width: 200px;
+  bottom: 20px;
+  right: 80px;
 }

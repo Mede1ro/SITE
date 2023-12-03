@@ -39,15 +39,17 @@
             <div class="container-card">
                 <div class="conteudo-card">
                     <h1>Login</h1>
-                    <form action="" method="post">
+                    <form action="/Redirecionamento/Validacao.php" method="post">
                         <div class="input-group">
-                            <input type="text" required name="user" id="user">
+                            <input type="text" required name="user" id="user" oninput="handleInputChange(this)" onfocus="handleInputFocus(this)" onblur="handleInputBlur(this)">
                             <label for="user">Usuário</label>
                         </div>
                         <div class="input-group">
-                            <input type="password" required name="pass" id="pass">
+                            <input type="password" required name="pass" id="pass" oninput="handleInputChange(this)" onfocus="handleInputFocus(this)" onblur="handleInputBlur(this)">
                             <label for="pass">Senha</label>
                         </div>
+
+                        <input class="logar" type="submit">
 
                         <p class="conteudo-card-redefinir">Esqueceu a senha? <a href="">Redefinir</a></p>
                         <p class="conteudo-card-registrar">Não tem uma conta? <a href="">Registre-se</a></p>
@@ -57,6 +59,45 @@
         </div>
     </div>
     </div>
+
+    <script>
+        function handleInputChange(input) {
+            const label = input.nextElementSibling;
+            if (input.value.trim() !== '') {
+                label.style.transform = 'translateY(-20px)';
+            } else {
+                label.style.transform = 'translateY(0)';
+            }
+        }
+
+        function handleInputFocus(input) {
+            const label = input.nextElementSibling;
+            updateLabelStyle(input, label);
+        }
+
+        function handleInputBlur(input) {
+            const label = input.nextElementSibling;
+            if (input.value.trim() === '') {
+                label.style.transform = 'translateY(0)';
+            }
+        }
+
+        function updateLabelStyle(input, label) {
+            if (input.value.trim() !== '' || input === document.activeElement) {
+                label.style.transform = 'translateY(-20px)';
+            } else {
+                label.style.transform = 'translateY(0)';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const userInput = document.getElementById('user');
+            const passInput = document.getElementById('pass');
+
+            updateLabelStyle(userInput, userInput.nextElementSibling);
+            updateLabelStyle(passInput, passInput.nextElementSibling);
+        });
+    </script>
 
 </body>
 
