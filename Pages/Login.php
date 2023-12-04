@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/Style.css">
-    <link rel="shortcut icon" href="../cocaina.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../Assets/cocaina.png" type="image/x-icon">
     <title>SosaBank</title>
 </head>
 
@@ -40,7 +40,7 @@
             <div class="container-card">
                 <div class="conteudo-card">
                     <h1>Login</h1>
-                    <form action="/Redirecionamento/Validacao.php" method="post">
+                    <form action="/Redirecionamento/Validacao.php" method="POST">
                         <div class="input-group">
                             <input type="text" required name="user" id="user" oninput="handleInputChange(this)" onfocus="handleInputFocus(this)" onblur="handleInputBlur(this)">
                             <label for="user">Usuário</label>
@@ -53,7 +53,7 @@
                         <input class="logar" type="submit">
 
                         <p class="conteudo-card-redefinir">Esqueceu a senha? <a href="">Redefinir</a></p>
-                        <p class="conteudo-card-registrar">Não tem uma conta? <a href="">Registre-se</a></p>
+                        <p class="conteudo-card-registrar">Não tem uma conta? <a href="../Pages/Registro.php">Registre-se</a></p>
                     </form>
                 </div>
             </div>

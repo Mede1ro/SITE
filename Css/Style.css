@@ -562,6 +562,10 @@
 
 /* /////////////////////////////////////////////////////////////ADMIN////////////////////////////////////////// */
 
+.hidden {
+  display: none;
+}
+
 .container-dashboard {
   width: 100vw;
   height: 100vh;
@@ -583,13 +587,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100px;
   background-color: white;
+  margin-top: 20px;
+}
+
+.conteudo-dashboard-menu-titulo img {
+  background-color: #444;
+  border-radius: 50%;
 }
 
 .conteudo-dashboard-menu-titulo h2 {
   font-size: 28px;
-  color: #5100ca;
+  color: #444;
+  text-transform: uppercase;
 }
 
 .conteudo-dashboard-menu-itens {
@@ -623,7 +635,7 @@
   gap: 10px;
   padding-left: 10px;
   text-decoration: none;
-  color: #322247;
+  color: #444;
   font-weight: 600;
   transition: transform 0.2s ease;
 }
@@ -659,6 +671,7 @@
   display: flex;
   gap: 40px;
   padding: 30px 40px 20px 70px;
+  margin-left: 1%;
 }
 
 .conteudo-dashboard-card-dados .cards {
@@ -700,7 +713,6 @@
 .conteudo-dashboard-card-loading {
   width: 1085px;
   height: 330px;
-  margin: 70px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.6);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -708,51 +720,144 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-left: 4.5%;
+  margin-top: 4%;
 }
 
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
 
-.lds-ring div {
+.loading {
   box-sizing: border-box;
   display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid #5100ca;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #5100ca transparent transparent transparent;
+  border: 4px solid #5100ca;
+  border-color: transparent #5100ca #5100ca #5100ca;
+  animation: spin 1.5s linear infinite;
 }
 
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
+@keyframes spin {
+  to {
     transform: rotate(360deg);
   }
+
+
 }
 
 .conteudo-dashboard-card-loading p {
   margin-top: 40px;
   font-size: 20px;
+}
+
+.container-dashboard-lateral {
+  width: 400px;
+  height: 80vh;
+  position: fixed;
+  top: 130px;
+  right: 30px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.conteudo-dashboard-lateral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////CONTAS//////////////////////////////////////////////////////////////*/
+.conteudo-dashboard-card-dados table {
+  width: 80vw;
+  height: 80vh;
+  border: 2px solid #777;
+  border-collapse: collapse;
+}
+
+.conteudo-dashboard-card-dados table thead th {
+  height: 30px;
+  border: 2px solid #777;
+  background-color: #5100cabb;
+  color: white;
+}
+
+.conteudo-dashboard-card-dados table .titulo {
+  font-size: 30px;
+}
+
+.conteudo-dashboard-card-dados tbody tr td {
+  text-align: center;
+  color: #5100ca;
+  border: 2px solid #777;
+}
+
+/* /////////////////////////////////////////////////////////////NOTIFICAÇÕES////////////////////////////////////////////////////////////////////////////// */
+
+.notificacoes-lista {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: 450px;
+}
+
+.notificacao-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.data-hora {
+  font-size: 12px;
+  color: #888;
+}
+
+.mensagem {
+  margin-top: 5px;
+}
+
+.status-servidor {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.status-falha {
+  font-weight: bold;
+  color: #F44336;
+}
+
+.status-lag {
+  font-weight: bold;
+  color: #FFC107;
+}
+
+.logs {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.alinhamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grafico-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
 }
