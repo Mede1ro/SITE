@@ -1,12 +1,5 @@
 <?php
-include_once '../Redirecionamento/Validacao.php';  // Substitua pelo caminho correto
-
-$userType = isset($_SESSION["user_type"]) ? $_SESSION["user_type"] : "";
-
-
-unset($_SESSION["user_type"]);
-
-// Output HTML com classes ocultas
+include_once '../Redirecionamento/Validacao.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -56,7 +49,7 @@ unset($_SESSION["user_type"]);
                             </tr>
                         </thead>
                         <tbody>
-                        <tr>
+                            <tr>
                                 <td>1</td>
                                 <td>João Silva</td>
                                 <td>joao.silva@email.com</td>

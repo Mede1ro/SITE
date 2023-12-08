@@ -1,12 +1,5 @@
 <?php
-include_once '../Redirecionamento/Validacao.php';  // Substitua pelo caminho correto
-
-$userType = isset($_SESSION["user_type"]) ? $_SESSION["user_type"] : "";
-
-
-unset($_SESSION["user_type"]);
-
-// Output HTML com classes ocultas
+include_once '../Redirecionamento/Validacao.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -33,7 +26,7 @@ unset($_SESSION["user_type"]);
                     <li class="dashboard-item-link"><a href="/Pages/Contas.php"> <img src="../Assets/balance.png" alt=""> CONTAS</a></li>
                     <li class="dashboard-item-link <?php echo $userType === 'Luiz' ? 'hidden' : ''; ?>"><a href="/Pages/Transacoes.php"> <img src="../Assets/transfer.png" alt=""> TRANSAÇÕES</a></li>
                     <li class="dashboard-item-link <?php echo $userType === 'Luiz' ? 'hidden' : ''; ?>"><a href="/Pages/Logs.php"> <img src="../Assets/active.png" alt=""> LOGS</a></li>
-                    <li class="dashboard-item-link deslogar"><a href="../Index.php"> <img src="../Assets/reject.png" alt=""> DESLOGAR</a></li>
+                    <li class="dashboard-item-link deslogar"><a href="../Index.php" onclick="deslogar()"> <img src="../Assets/reject.png" alt=""> DESLOGAR</a></li>
                 </ul>
             </div>
         </div>
