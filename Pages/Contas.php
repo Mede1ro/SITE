@@ -15,13 +15,18 @@ include_once '../Redirecionamento/Validacao.php';
     <div class="container-dashboard">
         <div class="conteudo-dashboard-menu">
             <div class="conteudo-dashboard-menu-titulo">
-                <img src="../Assets/king.png" alt="">
-                <h2>Admin</h2>
+                <?php if ($userType === 'Igor') : ?>
+                    <img src="../Assets/king.png" alt="">
+                    <h2>Admin</h2>
+                <?php else : ?>
+                    <img src="../Assets/prince.png" alt="">
+                    <h2>Inter</h2>
+                <?php endif; ?>
             </div>
             <div class="conteudo-dashboard-menu-itens">
                 <ul class="conteudo-dashboard-menu-item">
                     <li class="dashboard-item-link"><a href="/Pages/Dashboard.php"><img src="../Assets/dashboard.png" alt="">DASHBOARD</a></li>
-                    <li class="dashboard-item-link"><a href="#"> <img src="../Assets/group.png" alt=""> USUÁRIOS</a></li>
+                    <li class="dashboard-item-link"><a href="/Pages/Usuarios.php"> <img src="../Assets/group.png" alt=""> USUÁRIOS</a></li>
                     <li class="dashboard-item-link"><a href="/Pages/Contas.php"> <img src="../Assets/balance.png" alt=""> CONTAS</a></li>
                     <li class="dashboard-item-link <?php echo $userType === 'Luiz' ? 'hidden' : ''; ?>"><a href="/Pages/Transacoes.php"> <img src="../Assets/transfer.png" alt=""> TRANSAÇÕES</a></li>
                     <li class="dashboard-item-link <?php echo $userType === 'Luiz' ? 'hidden' : ''; ?>"><a href="/Pages/Logs.php"> <img src="../Assets/active.png" alt=""> LOGS</a></li>

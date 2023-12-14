@@ -11,6 +11,7 @@ include_once '../Redirecionamento/Validacao.php';
     <title>SosaBank</title>
 </head>
 
+
 <body>
     <div class="container-dashboard">
         <div class="conteudo-dashboard-menu">
@@ -37,45 +38,51 @@ include_once '../Redirecionamento/Validacao.php';
         <div class="conteudo-dashboard">
             <div class="conteudo-dashboard-card">
                 <div class="conteudo-dashboard-card titulo">
-                    <h1>DASHBOARD | <span>ANÁLISE DE DADOS</span></h1>
+                    <h1>DASHBOARD | <span>USUÁRIOS</span></h1>
                 </div>
                 <div class="conteudo-dashboard-card-dados">
-                    <div class="cards">
-                        <img src="../Assets/silhueta-do-grupo-de-usuarios (1).png" alt="">
-                        <h2>12.500</h2>
-                        <p>FUNCIONÁRIOS ATIVOS</p>
-                    </div>
-                    <div class="cards">
-                        <img src="../Assets/botao-mais.png" alt="">
-                        <h2>78.295</h2>
-                        <p>CONTAS NOVAS</p>
-                    </div>
-                    <div class="cards">
-                        <img src="../Assets/botao-de-menos.png" alt="">
-                        <h2>10.324</h2>
-                        <p>CONTAS CANCELADAS</p>
-                    </div>
-                    <div class="cards">
-                        <img src="../Assets/dolar.png" alt="">
-                        <h2>R$ 593.239.473</h2>
-                        <p>MONTANTE TOTAL</p>
-                    </div>
-                </div>
-                <div class="conteudo-dashboard-card-loading">
-                    <div class="loading"></div>
-                    <p>Carregando Dados do Sistema</p>
-                </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="titulo" colspan="5">SISTEMA DE GERENCIAMENTO DE USUÁRIOS</th>
+                            </tr>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Tipo de Usuário</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $usuarios = [
+                                ['id' => 1, 'nome' => 'João Silva', 'email' => 'joao.silva@email.com', 'tipo' => 'Admin'],
+                                ['id' => 2, 'nome' => 'Maria Oliveira', 'email' => 'maria.oliveira@email.com', 'tipo' => 'Usuário'],
+                                ['id' => 3, 'nome' => 'Carlos Pereira', 'email' => 'carlos.pereira@email.com', 'tipo' => 'Admin'],
+                                ['id' => 4, 'nome' => 'Ana Rodrigues', 'email' => 'ana.rodrigues@email.com', 'tipo' => 'Usuário'],
+                                ['id' => 5, 'nome' => 'Pedro Oliveira', 'email' => 'pedro.oliveira@email.com', 'tipo' => 'Admin'],
+                            ];
 
-                <div class="container-dashboard-lateral">
-                    <div class="conteudo-dashboard-lateral">
-                        <div class="loading"></div>
-                        <p>Carregando Dados do Sistema</p>
-                    </div>
+                            foreach ($usuarios as $usuario) {
+                                echo '<tr>';
+                                echo '<td>' . $usuario['id'] . '</td>';
+                                echo '<td>' . $usuario['nome'] . '</td>';
+                                echo '<td>' . $usuario['email'] . '</td>';
+                                echo '<td>' . $usuario['tipo'] . '</td>';
+                                echo '<td><a href="#">Editar</a> | <a href="#">Excluir</a></td>';
+                                echo '</tr>';
+                            }
+                            ?>
+                        </tbody>
+                    </table>
                 </div>
-
             </div>
         </div>
     </div>
 </body>
+
+</html>
+
 
 </html>

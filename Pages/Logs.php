@@ -15,15 +15,19 @@ include_once '../Redirecionamento/Validacao.php';
 <body>
     <div class="container-dashboard">
         <div class="conteudo-dashboard-menu">
-            <!-- Seu menu aqui -->
             <div class="conteudo-dashboard-menu-titulo">
-                <img src="../Assets/king.png" alt="">
-                <h2>Admin</h2>
+                <?php if ($userType === 'Igor') : ?>
+                    <img src="../Assets/king.png" alt="">
+                    <h2>Admin</h2>
+                <?php else : ?>
+                    <img src="../Assets/prince.png" alt="">
+                    <h2>Inter</h2>
+                <?php endif; ?>
             </div>
             <div class="conteudo-dashboard-menu-itens">
                 <ul class="conteudo-dashboard-menu-item">
                     <li class="dashboard-item-link"><a href="/Pages/Dashboard.php"><img src="../Assets/dashboard.png" alt="">DASHBOARD</a></li>
-                    <li class="dashboard-item-link"><a href="#"> <img src="../Assets/group.png" alt=""> USUÁRIOS</a></li>
+                    <li class="dashboard-item-link"><a href="/Pages/Usuarios.php"> <img src="../Assets/group.png" alt=""> USUÁRIOS</a></li>
                     <li class="dashboard-item-link"><a href="/Pages/Contas.php"> <img src="../Assets/balance.png" alt=""> CONTAS</a></li>
                     <li class="dashboard-item-link <?php echo $userType === 'Luiz' ? 'hidden' : ''; ?>"><a href="/Pages/Transacoes.php"> <img src="../Assets/transfer.png" alt=""> TRANSAÇÕES</a></li>
                     <li class="dashboard-item-link <?php echo $userType === 'Luiz' ? 'hidden' : ''; ?>"><a href="/Pages/Logs.php"> <img src="../Assets/active.png" alt=""> LOGS</a></li>
@@ -163,10 +167,8 @@ include_once '../Redirecionamento/Validacao.php';
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Script para gerar dados fictícios de informações importantes
             var dadosInfoImportantes = [];
             for (var i = 0; i < 24; i++) {
-                // Gere dados fictícios para ilustrar diferentes informações
                 var dado = Math.floor(Math.random() * 100) + 1;
                 dadosInfoImportantes.push(dado);
             }

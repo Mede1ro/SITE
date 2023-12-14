@@ -15,10 +15,10 @@
         <div class="menu-logo">SosaBank</div>
         <div class="menu-itens">
             <ul class="menu-item">
-                <li class="menu-item-link"><a href="#">Inicio</a></li>
-                <li class="menu-item-link"><a href="#">Contas e Serviços</a></li>
-                <li class="menu-item-link"><a href="#">Atendimento ao Cliente</a></li>
-                <li class="menu-item-link"><a href="#">Sobre Nós</a></li>
+                <li class="menu-item-link"><a href="index.php">Inicio</a></li>
+                <li class="menu-item-link"><a href="/Pages/Servicos.php">Contas e Serviços</a></li>
+                <li class="menu-item-link"><a href="/Pages/Atendimento.php">Atendimento ao Cliente</a></li>
+                <li class="menu-item-link"><a href="/Pages/Sobre.php">Sobre Nós</a></li>
             </ul>
         </div>
         <div class="login">

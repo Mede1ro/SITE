@@ -804,7 +804,12 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  margin-right: 450px;
+  margin-right: 210px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 20px;
+  width: 550px;
+  height: 600px;
+  padding: 30px;
 }
 
 .notificacao-item {
@@ -841,9 +846,14 @@
 
 .logs {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 20px;
+  width: 500px;
+  height: 600px;
 }
 
 .alinhamento {
@@ -860,4 +870,76 @@
 canvas {
   max-width: 100%;
   height: auto;
+}
+
+/* /////////////////////////////////////////////SOBRE/////////////////////////////////////////// */
+
+.texto-sobre h1 {
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  margin-top: 40px;
+}
+
+.texto-sobre p {
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 220px;
+  margin-right: 220px;
+  text-align: center;
+}
+
+/* //////////////////////////////////////////////ATENDIMENTOS////////////////////////////////// */
+
+.atendimento {
+  max-width: 800px;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.atendimento h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.atendimento p {
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.atendimento ul {
+  color: white;
+  list-style: none;
+}
+
+
+/* ///////////////////////////////////////////SERVICOS//////////////////////////////////// */
+.contas-servicos {
+  max-width: 800px;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.contas-servicos h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.contas-servicos p {
+  color: white;
+  line-height: 1.6;
+}
+
+.servicos-lista {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.servicos-lista li {
+  margin-bottom: 10px;
+  color: white;
 }
